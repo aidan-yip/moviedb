@@ -1,4 +1,4 @@
-const API_TITLE = "Movie App";
-const API_KEY = import.meta.env.VITE_TMBD_TOKEN;
+const APP_TITLE = "Movie App";
+const API_KEY = import.meta.env.VITE_TMBD_KEY;
 
-export { API_TITLE, API_KEY };
+export { APP_TITLE, API_KEY };
