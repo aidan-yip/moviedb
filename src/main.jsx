@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 
 // css
 import './index.css'
+import './normalise.css'
 
 import AppRouter from './router/AppRouter'
 
