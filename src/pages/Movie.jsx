@@ -1,10 +1,6 @@
-import './movie.css';
+import "./movie.css";
 
 function Movie() {
-    return (
-        <div>
-            <h1>{}</h1>
-        </div>
-    )
+  return <div>Movie</div>;
 }
 export default Movie;
