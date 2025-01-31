@@ -1,0 +1,42 @@
+.movies {
+  padding: 2rem;
+}
+
+.movies h1 {
+  margin-bottom: 2rem;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .movie {
+    padding: 1rem;
+  }
+  .movies-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movies-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .movies-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+}
