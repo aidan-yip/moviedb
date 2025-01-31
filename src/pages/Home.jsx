@@ -50,7 +50,6 @@ function Home() {
 
   return (
     <div>
-      <h1 className="page-header">Home Page</h1>
       <Movies title="Popular Movies" movies={popularMovies} />
       <Movies title="Now Playing" movies={nowPlayingMovies} />
       <Movies title="Top Rated" movies={topRatedMovies} />
