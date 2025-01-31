@@ -1,0 +1,14 @@
+.page-header {
+    font-size: 2rem;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+.about-logo {
+    width: 300px;
+    padding: 2rem;
+}
+
+.about-text {
+    padding: 2rem;
+}
