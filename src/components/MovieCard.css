@@ -6,6 +6,13 @@
   cursor: pointer;
   width: 100%;
   max-width: 300px;
+  box-shadow: 0 0 10px #00000086;
+  transition: 0.5s ease;
+}
+
+.movie-card:hover {
+  box-shadow: 0 0 25px #e6e6e656;
+  transform: scale(1.05);
 }
 
 .movie-card img {
@@ -30,7 +37,7 @@
   transition: opacity 0.3s ease;
 }
 
-.movie-card:hover .hover {
+.hover:hover {
   opacity: 1;
 }
 
