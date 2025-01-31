@@ -1,0 +1,32 @@
+.banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    font-size: 2em;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+}
+
+.title {
+    z-index: 1;
+}
