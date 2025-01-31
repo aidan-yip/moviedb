@@ -39,7 +39,7 @@ nav {
 
 .navlink,
 .navlink:visited {
-  padding: 0.7rem;
+  padding: 0.7rem 1rem;
   margin: 0.7rem;
   list-style: none;
   color: #ffffff;
@@ -48,15 +48,15 @@ nav {
   font-style: normal;
   transition: 0.7s;
   background-color: transparent;
-  border-radius: 0.7rem;
+  border-radius: 0.5rem;
 }
 
 .navlink:hover,
 .navlink:active,
 .navlink:focus {
   color: #000000;
-  background-color: #ffe100;
-  box-shadow: #ffe100 0px 0px 15px 0px;
+  background-color: #b6e7ff;
+  box-shadow: #b6e7ff 0px 0px 15px 0px;
 }
 
 .nav_arrow,
