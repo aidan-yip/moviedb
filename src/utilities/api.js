@@ -1,4 +1,4 @@
-import { API_KEY, BASE_URL } from "../src/globals/globals";
+import { API_KEY, BASE_URL } from "../globals/globals";
 
 function getMovies(type){
     return fetch(`${BASE_URL}/movie/${type}?api_key=${API_KEY}`)

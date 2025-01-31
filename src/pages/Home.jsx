@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import "./home.css";
-import { getMovies } from "../../utilities/api.js";
+import { getMovies } from "../utilities/api.js";
 import Movies from "../components/movies.jsx";
 // import { data } from 'react-router';
 
