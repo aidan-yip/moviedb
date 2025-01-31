@@ -1,26 +1,34 @@
-import { APP_TITLE } from '../globals/globals';
-import './header.css';
-import { Link } from 'react-router-dom';
+import { APP_TITLE } from "../globals/globals";
+import "./Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <h1>{APP_TITLE}</h1>
       <nav>
-        <ul>
+        <menu>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="navlink">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/Favorites">Favorites</Link>
+            <Link to="/Favorites" className="navlink">
+              Favorites
+            </Link>
           </li>
           <li>
-            <Link to="/About">About</Link>
+            <Link to="/About" className="navlink">
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/Movies/:id">Movies</Link>
+            <Link to="/Movies/:id" className="navlink">
+              Movies
+            </Link>
           </li>
-        </ul>
+        </menu>
       </nav>
     </header>
   );
