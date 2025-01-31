@@ -14,7 +14,7 @@ function MovieCard({ movie }) {
           <p>{formatReleaseDate(movie.release_date)}</p>
         </div>
         <div className="rating-and-favorite">
-          <p>{formatRating(movie.vote_average)}</p>
+          <p>Rating {formatRating(movie.vote_average)}</p>
           <buttom>♥️</buttom>
         </div>
       </div>
