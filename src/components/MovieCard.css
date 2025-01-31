@@ -60,6 +60,8 @@
 .rating-and-favorite {
   display: flex;
   justify-content: space-between;
+  margin-top: 16.2rem;
+  padding-right: 2rem;
   align-items: center;
   color: #ffffff;
 }
