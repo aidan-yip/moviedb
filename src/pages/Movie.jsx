@@ -34,6 +34,7 @@ function Movie() {
           <p>{movie.overview}</p>
           <p>Rating: {movie.vote_average}</p>
           <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
+          <button>♥️</button>
         </>
       )}
     </div>
