@@ -55,8 +55,7 @@ nav {
 }
 
 .navlink:hover,
-.navlink:active,
-.navlink:focus {
+.navlink:active {
   color: #000000;
   background-color: #b6e7ff;
   box-shadow: #b6e7ff 0px 0px 15px 0px;
