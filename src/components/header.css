@@ -1,6 +1,9 @@
 header {
   display: block;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 5rem;
   display: flex;
@@ -52,8 +55,7 @@ nav {
 }
 
 .navlink:hover,
-.navlink:active,
-.navlink:focus {
+.navlink:active {
   color: #000000;
   background-color: #b6e7ff;
   box-shadow: #b6e7ff 0px 0px 15px 0px;

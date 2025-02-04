@@ -23,11 +23,6 @@ function Header() {
               About
             </Link>
           </li>
-          <li>
-            <Link to="/Movies/:id" className="navlink">
-              Movies
-            </Link>
-          </li>
         </menu>
       </nav>
     </header>
