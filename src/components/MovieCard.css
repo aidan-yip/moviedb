@@ -6,12 +6,12 @@
   cursor: pointer;
   width: 100%;
   max-width: 300px;
-  box-shadow: 0 0 10px #00000086;
+  box-shadow: 0px 7px 25px #000000c0;
   transition: 0.5s ease;
 }
 
 .movie-card:hover {
-  box-shadow: 0 0 25px #e6e6e656;
+  box-shadow: 0px 7px 25px #e6e6e656;
   transform: scale(1.05);
 }
 
