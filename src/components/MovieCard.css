@@ -49,6 +49,7 @@
   font-size: 1.25rem;
   margin: 0 0 0.5rem 0;
   overflow-wrap: break-word;
+  padding-right: 1rem;
 }
 
 .title-and-release p {
