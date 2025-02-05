@@ -32,7 +32,6 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -49,7 +48,7 @@
   font-size: 1.25rem;
   margin: 0 0 0.5rem 0;
   overflow-wrap: break-word;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .title-and-release p {
@@ -62,7 +61,7 @@
 .rating-and-favorite {
   display: flex;
   justify-content: space-between;
-  margin-top: 15rem;
+  margin-top: 14rem;
   padding-right: 2rem;
   align-items: center;
   color: #ffffff;
