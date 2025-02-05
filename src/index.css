@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
   display: flex;
@@ -47,9 +46,28 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #b6e7ff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* skip to main content accessibility */
+
+#skip_to_main {
+  position: absolute;
+  z-index: 1001;
+  opacity: 0;
+  margin-top: 1.5rem;
+  margin-left: 4rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  height: 1.5rem;
+  pointer-events: none;
+  background-color: #1e1e1e;
+}
+
+#skip_to_main:focus {
+  opacity: 1;
 }

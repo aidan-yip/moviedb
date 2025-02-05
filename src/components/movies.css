@@ -6,12 +6,22 @@
   margin-bottom: 2rem;
 }
 
+.movies:first-of-type {
+  margin-top: 5rem;
+}
+
 .movies-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 1rem;
   justify-content: center;
+}
+
+.divider {
+  margin-top: 3rem;
+  border-bottom: solid 1px #525252;
+  width: 100%;
 }
 
 @media (min-width: 700px) {

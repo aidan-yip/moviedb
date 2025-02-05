@@ -1,10 +1,13 @@
+/* navigation */
+
 header {
   display: block;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  margin: 0rem;
+  border-radius: 0rem;
   height: 5rem;
   display: flex;
   z-index: 1000;
@@ -12,9 +15,9 @@ header {
   justify-content: space-between;
   padding: 0rem 1rem;
   background-color: #323232dd;
-  box-shadow: 0px 0px 10px 0px #000000;
+  border: solid 1.3px #474747ee;
+  box-shadow: 0px 10px 10px 0px #0000007a;
   backdrop-filter: blur(7px);
-  /* legacy webkit support */
   -webkit-backdrop-filter: blur(7px);
 }
 
@@ -23,14 +26,16 @@ menu {
   height: 0rem;
   position: absolute;
   width: 100%;
-  margin-right: 5rem;
-  text-decoration: none;
   list-style: none;
+  right: 0rem;
+  margin-top: 26rem;
+  text-decoration: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
   transition: 0.5s;
+  background-color: #1e1e1eeb;
 }
 
 nav {
@@ -42,8 +47,9 @@ nav {
 
 .navlink,
 .navlink:visited {
-  padding: 0.7rem 1rem;
+  padding: 0.7rem;
   margin: 0.7rem;
+  text-decoration: none;
   list-style: none;
   color: #ffffff;
   font-size: 1.5rem;
@@ -51,7 +57,7 @@ nav {
   font-style: normal;
   transition: 0.7s;
   background-color: transparent;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
 }
 
 .navlink:hover,
@@ -61,36 +67,48 @@ nav {
   box-shadow: #b6e7ff 0px 0px 15px 0px;
 }
 
-.nav_arrow,
-.nav_arrow:visited {
+.header_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+}
+
+.menu_button {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
-  position: absolute;
-  font-size: clamp(3rem, 5vw, 10rem);
-  margin-top: 40rem;
   color: #ffffff;
-  background-color: #000000b3;
-  backdrop-filter: blur(7px);
-  /* legacy webkit support */
-  -webkit-backdrop-filter: blur(7px);
-  text-decoration: none;
+  background-color: transparent;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
-.nav_arrow:hover,
-.nav_arrow:active,
-.nav_arrow:focus {
+.menu_button:active {
   color: #000000;
-  background-color: #ffe100;
-  box-shadow: #ffe100 0px 0px 15px 0px;
+  background-color: #b6e7ff;
 }
 
+.menu_icon {
+  font-size: 3rem;
+}
+
+/* class to open menu in javascript */
+.menu_toggle {
+  /* display: flex; */
+  height: 20rem;
+}
+
+/* desktop styles */
 @media (min-width: 50em) {
+  /* navigation */
+
   header {
     align-items: center;
     flex-direction: row;
+    margin: 0.8rem;
     padding: 0rem 3rem;
+    border-radius: 1rem;
   }
 
   menu {
@@ -98,7 +116,20 @@ nav {
     height: 100%;
     position: static;
     height: 5rem;
+    margin-right: 0rem;
+    margin-top: 1rem;
     flex-direction: row;
     justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .menu_button {
+    display: none;
+  }
+
+  #skip_to_main {
+    height: auto;
+    margin: 0rem;
+    margin-left: 0rem;
   }
 }
