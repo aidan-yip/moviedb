@@ -23,15 +23,17 @@
 }
 
 .hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 95%;
   background-color: #000000e8;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 3rem;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -61,8 +63,8 @@
 .rating-and-favorite {
   display: flex;
   justify-content: space-between;
-  margin-top: 14rem;
   padding-right: 2rem;
+  padding-bottom: 1rem;
   align-items: center;
   color: #ffffff;
 }
