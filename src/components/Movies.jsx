@@ -7,10 +7,11 @@ function Movies({ title, movies }) {
       <h1>{title}</h1>
       {/* map over movies */}
       <div className="movies-container">
-        {movies.map((movie) => (
+        {movies.slice(0, 10).map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
+      <div className="divider"></div>
     </div>
   );
 }
