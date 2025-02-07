@@ -9,6 +9,7 @@ import React from "react";
 // MUI
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
+import FavoriteButton from "../components/FavoriteButton";
 
 function Movie() {
   const [movie, setMovie] = useState(null);
@@ -42,7 +43,7 @@ function Movie() {
           <p>{movie.overview}</p>
           <p>Rating: {formatRating(movie.vote_average)}</p>
           <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
-          <button className="fav-button">Add to Favorites: ♥️</button>
+          <FavoriteButton movie={movie} />
           {/* user movie rating */}
           <p>Rate This Movie:</p>
           <Box sx={{ "& > legend": { mt: 2 } }}>
