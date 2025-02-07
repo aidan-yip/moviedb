@@ -50,6 +50,7 @@ function Movie() {
             <Rating
               name="simple-controlled"
               value={value}
+              size="large"
               onChange={(event, newValue) => {
                 setValue(newValue);
               }}
