@@ -1,6 +1,7 @@
 import { IMG_URL } from "../globals/globals";
 import "./MovieCard.css";
 import { useNavigate } from "react-router-dom";
+import FavoriteButton from "./FavoriteButton";
 
 // helper functions
 import { formatReleaseDate, formatRating } from "../globals/toolbelt";
@@ -17,7 +18,7 @@ function MovieCard({ movie }) {
         </div>
         <div className="rating-and-favorite">
           <p>Rating {formatRating(movie.vote_average)}</p>
-          <button>♥️</button>
+          <FavoriteButton movie={movie} />
         </div>
       </div>
     </div>

@@ -1,11 +1,14 @@
-import './favorites.css';
+import "./favorites.css";
+import Movies from "../components/movies";
+import { GlobalContext } from "../context/GlobalContext";
+import { useContext } from "react";
 
 function Favorites() {
-    return (
-        <div>
-            <h2>Favorites</h2>
-            <p>Your favorites</p>
-        </div>
-    )
+  const { loadFavsFromLocalStorage } = useContext(GlobalContext);
+  return (
+    <div>
+      <Movies title="Favorite Movies" movies={loadFavsFromLocalStorage()} />
+    </div>
+  );
 }
 export default Favorites;

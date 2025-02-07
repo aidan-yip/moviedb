@@ -1,5 +1,5 @@
 import { createContext, useEffect } from "react";
-
+import { useState } from "react";
 const GlobalContext = createContext();
 
 function GlobalProvider({ children }) {
@@ -26,7 +26,14 @@ function GlobalProvider({ children }) {
   }
 
   return (
-    <GlobalContext.Provider value={{ favorites, addFavorite, removeFavorite }}>
+    <GlobalContext.Provider
+      value={{
+        favorites,
+        addFavorite,
+        removeFavorite,
+        loadFavsFromLocalStorage,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );
