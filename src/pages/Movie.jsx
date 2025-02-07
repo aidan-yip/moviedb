@@ -3,7 +3,12 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getMovieById } from "../utilities/api";
 import { IMG_URL } from "../globals/globals";
-import { formatReleaseDate } from "../globals/toolbelt";
+import { formatReleaseDate, formatRating } from "../globals/toolbelt";
+import React from "react";
+
+// MUI
+import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
 
 function Movie() {
   const [movie, setMovie] = useState(null);
@@ -21,6 +26,9 @@ function Movie() {
       });
   }, [id]);
 
+  // MUI
+  const [value, setValue] = React.useState(2);
+
   return (
     <div className="moviePage">
       {movie && (
@@ -32,9 +40,21 @@ function Movie() {
             alt={movie.title}
           />
           <p>{movie.overview}</p>
-          <p>Rating: {movie.vote_average}</p>
+          <p>Rating: {formatRating(movie.vote_average)}</p>
           <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
-          <button>♥️</button>
+          <button className="fav-button">Add to Favorites: ♥️</button>
+          {/* user movie rating */}
+          <p>Rate This Movie:</p>
+          <Box sx={{ "& > legend": { mt: 2 } }}>
+            <Rating
+              name="simple-controlled"
+              value={value}
+              onChange={(event, newValue) => {
+                setValue(newValue);
+              }}
+            />
+          </Box>
+          {/* movie rating */}
         </>
       )}
     </div>
