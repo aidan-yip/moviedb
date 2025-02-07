@@ -34,3 +34,7 @@
 .fav-button {
     color: #ffffff
 }
+
+.MuiRating-icon.MuiRating-iconEmpty.css-9xw0na-MuiRating-icon {
+    color: #dddddd;
+}
