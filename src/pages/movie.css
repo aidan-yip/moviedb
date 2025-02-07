@@ -1,40 +1,68 @@
+.moviePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.movieInfo {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
 .banner {
-    width: 100%;
-    height: auto;
-    position: relative;
+  width: 90%;
+  height: auto;
+  position: relative;
+  margin: 3rem auto;
+  margin-top: 9rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 7px 25px #000000c0;
 }
 
-.title {
-    position: absolute;
-    top: 80px;
-    left: 50%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    text-align: center;
-    font-size: 2em;
-}
 .banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
 }
 
 .title {
-    z-index: 1;
+  font-size: 1.7rem;
 }
 
 .fav-button {
-    color: #ffffff
+  color: #ffffff;
 }
 
 .MuiRating-icon.MuiRating-iconEmpty.css-9xw0na-MuiRating-icon {
-    color: #dddddd;
+  color: #dddddd;
+}
+
+@media (min-width: 50rem) {
+  .fav-button {
+    width: 20rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .movieInfo {
+    width: 50%;
+  }
+
+  .banner {
+    width: 50%;
+  }
 }
