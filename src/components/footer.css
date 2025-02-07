@@ -1,3 +1,6 @@
 .page-footer {
+    position: relative;
     padding: 2rem;
+    bottom: 0;
+    border-top: 1px solid #525252;
 }

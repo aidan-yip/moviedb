@@ -8,9 +8,11 @@ import Movie from "../pages/Movie";
 import Favorites from "../pages/Favorites";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { GlobalProvider } from "../context/GlobalContext";
 
 const AppRouter = () => (
   <BrowserRouter>
+  <GlobalProvider>
     <Header />
     <main id="maincontent">
       <Routes>
@@ -21,6 +23,7 @@ const AppRouter = () => (
       </Routes>
     </main>
     <Footer />
+    </GlobalProvider>
   </BrowserRouter>
 );
 
