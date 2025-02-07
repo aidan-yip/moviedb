@@ -28,18 +28,20 @@ function Movie() {
   }, [id]);
 
   // MUI
-  const [value, setValue] = React.useState(2);
+  const [value, setValue] = React.useState(3);
 
   return (
     <div className="moviePage">
       {movie && (
         <>
-          <h1 className="title">{movie.title}</h1>
           <img
             className="banner"
             src={`${IMG_URL}w780/${movie.backdrop_path}`}
             alt={movie.title}
           />
+          <section className="movieInfo">
+          <h1 className="title">{movie.title}</h1>
+          <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
           <p>{movie.overview}</p>
           <p>Rating: {formatRating(movie.vote_average)}</p>
           <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
@@ -56,6 +58,7 @@ function Movie() {
             />
           </Box>
           {/* movie rating */}
+          </section>
         </>
       )}
     </div>
