@@ -4,10 +4,10 @@ import { GlobalContext } from "../context/GlobalContext";
 import { useContext } from "react";
 
 function Favorites() {
-  const { loadFavsFromLocalStorage } = useContext(GlobalContext);
+  const { favorites, loadFavsFromLocalStorage } = useContext(GlobalContext);
   return (
     <div>
-      <Movies title="Favorite Movies" movies={loadFavsFromLocalStorage()} />
+      <Movies title="Favorite Movies" movies={favorites} />
     </div>
   );
 }
