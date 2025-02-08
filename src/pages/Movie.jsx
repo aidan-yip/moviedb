@@ -44,7 +44,6 @@ function Movie() {
           <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
           <p>{movie.overview}</p>
           <p>Rating: {formatRating(movie.vote_average)}</p>
-          <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
           <FavoriteButton movie={movie} />
           {/* user movie rating */}
           <p>Rate This Movie:</p>
