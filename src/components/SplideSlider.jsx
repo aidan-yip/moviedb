@@ -115,6 +115,21 @@ function SplideSlider() {
           />
         </SplideSlide>
       )}
+      {upcomingMovies.length > 0 && (
+        <SplideSlide className="splideSlide">
+          <img
+            className="home-banner"
+            src={`${IMG_URL}w780/${
+              upcomingMovies[Math.floor(Math.random() * upcomingMovies.length)]
+                .backdrop_path
+            }`}
+            alt={
+              upcomingMovies[Math.floor(Math.random() * upcomingMovies.length)]
+                .title
+            }
+          />
+        </SplideSlide>
+      )}
     </Splide>
   );
 }
