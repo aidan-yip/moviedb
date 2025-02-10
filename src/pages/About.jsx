@@ -1,5 +1,5 @@
 import "./about.css";
-import camera_img from "/public/images/camera_icon.svg";
+import camera_img from "/images/camera_icon.svg";
 
 function About() {
   return (
