@@ -1,4 +1,5 @@
 .movies {
+  width: 100%;
   padding: 2rem;
 }
 
@@ -7,7 +8,7 @@
 }
 
 .movies:first-of-type {
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .movies-container {

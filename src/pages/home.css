@@ -1,12 +1,16 @@
 .overlay-container {
+  width: 100vw;
   position: relative;
   z-index: 1;
-  margin-top: 100vh;
+  margin-top: 45vh;
   padding-bottom: 5rem;
-  background: #1e1e1e;
-  box-shadow: 0px 7px 25px #000000d3;
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
+  background-color: #323232dd;
+  border: solid 1.3px #474747ee;
+  box-shadow: 0px 10px 10px 0px #0000007a;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 
 .movies {
@@ -23,5 +27,17 @@
   position: relative;
   z-index: 500;
   margin-top: 3rem;
-  font-size: 3rem;
+  font-size: 2rem;
+  padding-right: 3rem;
+}
+
+/* desktop styles */
+@media (min-width: 50em) {
+  .overlay-container {
+    margin-top: 100vh;
+  }
+  .section-header {
+    margin-top: 0rem;
+    font-size: 3rem;
+  }
 }
