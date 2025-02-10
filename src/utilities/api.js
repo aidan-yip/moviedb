@@ -28,6 +28,20 @@ function getMovieById(id) {
         throw error;
       });
   }
+  function getMovieCast(movieId) {
+    return fetch(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch cast information");
+            }
+            return response.json();
+        })
+        .then((data) => data.cast) // Return only the cast array
+        .catch((error) => {
+            console.error("Error fetching movie cast:", error);
+            throw error;
+        });
+}
 
 
-export { getMovies, getMovieById };
+export { getMovies, getMovieById, getMovieCast };
