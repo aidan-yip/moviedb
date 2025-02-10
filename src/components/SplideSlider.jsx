@@ -4,7 +4,7 @@ import { getMovies } from "../utilities/api.js";
 import { IMG_URL } from "../globals/globals";
 
 // splide slider
-import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 // css
 import "@splidejs/react-splide/css/skyblue";
@@ -63,9 +63,9 @@ function SplideSlider() {
         interval: 3500, // 4 second interval
         pauseOnHover: false,
         direction: "ltr",
-        wheel: true,
-        releaseWheel: true,
-        wheelMinThreshold: 2,
+        // wheel: true,
+        // releaseWheel: true,
+        // wheelMinThreshold: 10,
       }}
     >
       {popularMovies.length > 0 && (
