@@ -5,6 +5,9 @@ import { getMovies } from "../utilities/api.js";
 import Movies from "../components/Movies.jsx";
 // import { data } from 'react-router';
 
+// components
+import SplideSlider from "../components/SplideSlider.jsx";
+
 function Home() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
@@ -50,6 +53,7 @@ function Home() {
 
   return (
     <div>
+      <SplideSlider />
       <Movies title="Popular Movies" movies={popularMovies} />
       <Movies title="Now Playing" movies={nowPlayingMovies} />
       <Movies title="Top Rated" movies={topRatedMovies} />
