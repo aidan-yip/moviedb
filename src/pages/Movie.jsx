@@ -1,7 +1,7 @@
 import "./movie.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getMovieById } from "../utilities/api";
+import { getMovieById,getMovieCast } from "../utilities/api";
 import { IMG_URL } from "../globals/globals";
 import { formatReleaseDate, formatRating } from "../globals/toolbelt";
 import React from "react";
@@ -9,9 +9,11 @@ import React from "react";
 // MUI
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
+import FavoriteButton from "../components/FavoriteButton";
 
 function Movie() {
   const [movie, setMovie] = useState(null);
+  const [cast, setCast] = useState([]); 
   const { id } = useParams();
 
   useEffect(() => {
@@ -23,6 +25,13 @@ function Movie() {
       .catch((error) => {
         alert("Error fetching movie", error);
         console.error("Error fetching movie", error);
+      });
+      getMovieCast(id)
+      .then((castData) => {
+        setCast(castData.slice(0, 5)); 
+      })
+      .catch((error) => {
+        console.error("Error fetching cast:", error);
       });
   }, [id]);
 
@@ -43,19 +52,41 @@ function Movie() {
           <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
           <p>{movie.overview}</p>
           <p>Rating: {formatRating(movie.vote_average)}</p>
-          <button className="fav-button">Add to Favorites: ♥️</button>
+          <FavoriteButton movie={movie} />
           {/* user movie rating */}
           <p>Rate This Movie:</p>
           <Box sx={{ "& > legend": { mt: 2 } }}>
             <Rating
               name="simple-controlled"
               value={value}
+              size="large"
               onChange={(event, newValue) => {
                 setValue(newValue);
               }}
             />
           </Box>
           {/* movie rating */}
+          <h2>Cast</h2>
+            <div className="cast-container">
+              {cast.length > 0 ? (
+                cast.map((actor) => (
+                  <div key={actor.id} className="cast-member">
+                    <img
+                      src={
+                        actor.profile_path
+                          ? `${IMG_URL}w185/${actor.profile_path}`
+                          : "https://via.placeholder.com/185" // TODO:  Add a Fallback image
+                      }
+                      alt={actor.name}
+                    />
+                    <p><strong>{actor.name}</strong></p>
+                    <p>as {actor.character}</p>
+                  </div>
+                ))
+              ) : (
+                <p>No cast information available.</p>
+              )}
+            </div>
           </section>
         </>
       )}

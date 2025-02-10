@@ -1,4 +1,5 @@
 .moviePage {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,6 +44,7 @@
 
 .fav-button {
   color: #ffffff;
+  width: 100%;
 }
 
 .MuiRating-icon.MuiRating-iconEmpty.css-9xw0na-MuiRating-icon {
@@ -51,7 +53,7 @@
 
 @media (min-width: 50rem) {
   .fav-button {
-    width: 20rem;
+    width: 5rem;
   }
 
   .title {
