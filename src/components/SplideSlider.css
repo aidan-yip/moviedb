@@ -1,6 +1,11 @@
 .splideContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 4.5rem;
+  margin-top: 5rem;
+  z-index: 1;
 }
 
 .splideSlide {
