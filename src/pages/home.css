@@ -1,0 +1,27 @@
+.overlay-container {
+  position: relative;
+  z-index: 1;
+  margin-top: 100vh;
+  padding-bottom: 5rem;
+  background: #1e1e1e;
+  box-shadow: 0px 7px 25px #000000d3;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.movies {
+  position: relative;
+  z-index: 500;
+}
+
+.divider {
+  position: relative;
+  z-index: 500;
+}
+
+.section-header {
+  position: relative;
+  z-index: 500;
+  margin-top: 3rem;
+  font-size: 3rem;
+}

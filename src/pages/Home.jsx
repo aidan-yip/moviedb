@@ -52,13 +52,15 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <section>
       <SplideSlider />
-      <Movies title="Popular Movies" movies={popularMovies} />
-      <Movies title="Now Playing" movies={nowPlayingMovies} />
-      <Movies title="Top Rated" movies={topRatedMovies} />
-      <Movies title="Upcoming" movies={upcomingMovies} />
-    </div>
+      <div className="overlay-container">
+        <Movies title="Popular Movies" movies={popularMovies} />
+        <Movies title="Now Playing" movies={nowPlayingMovies} />
+        <Movies title="Top Rated" movies={topRatedMovies} />
+        <Movies title="Upcoming" movies={upcomingMovies} />
+      </div>
+    </section>
   );
 }
 export default Home;

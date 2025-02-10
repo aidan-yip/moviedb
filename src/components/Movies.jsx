@@ -3,8 +3,8 @@ import "./Movies.css";
 
 function Movies({ title, movies }) {
   return (
-    <div className="movies">
-      <h1>{title}</h1>
+    <section className="movies">
+      <h1 className="section-header">{title}</h1>
       {/* map over movies */}
       <div className="movies-container">
         {movies.slice(0, 10).map((movie) => (
@@ -12,7 +12,7 @@ function Movies({ title, movies }) {
         ))}
       </div>
       <div className="divider"></div>
-    </div>
+    </section>
   );
 }
 
