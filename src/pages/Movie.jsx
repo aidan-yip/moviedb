@@ -1,10 +1,15 @@
 import "./movie.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getMovieById,getMovieCast } from "../utilities/api";
+import {
+  getMovieById,
+  getMovieCast,
+  getRecommendedMovies,
+} from "../utilities/api";
 import { IMG_URL } from "../globals/globals";
 import { formatReleaseDate, formatRating } from "../globals/toolbelt";
 import React from "react";
+import Movies from "../components/movies";
 
 // MUI
 import Box from "@mui/material/Box";
@@ -13,8 +18,9 @@ import FavoriteButton from "../components/FavoriteButton";
 
 function Movie() {
   const [movie, setMovie] = useState(null);
-  const [cast, setCast] = useState([]); 
+  const [cast, setCast] = useState([]);
   const { id } = useParams();
+  const [recommendedMovies, setRecommendedMovies] = useState([]);
 
   useEffect(() => {
     getMovieById(id)
@@ -26,12 +32,20 @@ function Movie() {
         alert("Error fetching movie", error);
         console.error("Error fetching movie", error);
       });
-      getMovieCast(id)
+    getMovieCast(id)
       .then((castData) => {
-        setCast(castData.slice(0, 5)); 
+        setCast(castData.slice(0, 5));
       })
       .catch((error) => {
         console.error("Error fetching cast:", error);
+      });
+    getRecommendedMovies(id)
+      .then((recommendedMoviesData) => {
+        setRecommendedMovies(recommendedMoviesData.results);
+        console.log(recommendedMoviesData);
+      })
+      .catch((error) => {
+        console.error("Error fetching recommended movies:", error);
       });
   }, [id]);
 
@@ -48,25 +62,25 @@ function Movie() {
             alt={movie.title}
           />
           <section className="movieInfo">
-          <h1 className="title">{movie.title}</h1>
-          <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
-          <p>{movie.overview}</p>
-          <p>Rating: {formatRating(movie.vote_average)}</p>
-          <FavoriteButton movie={movie} />
-          {/* user movie rating */}
-          <p>Rate This Movie:</p>
-          <Box sx={{ "& > legend": { mt: 2 } }}>
-            <Rating
-              name="simple-controlled"
-              value={value}
-              size="large"
-              onChange={(event, newValue) => {
-                setValue(newValue);
-              }}
-            />
-          </Box>
-          {/* movie rating */}
-          <h2>Cast</h2>
+            <h1 className="title">{movie.title}</h1>
+            <p>Release Date: {formatReleaseDate(movie.release_date)}</p>
+            <p>{movie.overview}</p>
+            <p>Rating: {formatRating(movie.vote_average)}</p>
+            <FavoriteButton movie={movie} />
+            {/* user movie rating */}
+            <p>Rate This Movie:</p>
+            <Box sx={{ "& > legend": { mt: 2 } }}>
+              <Rating
+                name="simple-controlled"
+                value={value}
+                size="large"
+                onChange={(event, newValue) => {
+                  setValue(newValue);
+                }}
+              />
+            </Box>
+            {/* movie rating */}
+            <h2>Cast</h2>
             <div className="cast-container">
               {cast.length > 0 ? (
                 cast.map((actor) => (
@@ -79,7 +93,9 @@ function Movie() {
                       }
                       alt={actor.name}
                     />
-                    <p><strong>{actor.name}</strong></p>
+                    <p>
+                      <strong>{actor.name}</strong>
+                    </p>
                     <p>as {actor.character}</p>
                   </div>
                 ))
@@ -87,6 +103,7 @@ function Movie() {
                 <p>No cast information available.</p>
               )}
             </div>
+            <Movies title="Recommended Movies" movies={recommendedMovies} />
           </section>
         </>
       )}
