@@ -52,7 +52,7 @@ function Home() {
   }, []);
 
   return (
-    <section>
+    <section className="home_container">
       <SplideSlider />
       <div className="overlay-container">
         <Movies title="Popular Movies" movies={popularMovies} />
