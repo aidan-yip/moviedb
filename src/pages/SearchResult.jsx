@@ -3,6 +3,7 @@ import { use } from "react";
 import { getsearchedMovies } from "../utilities/api.js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+im;
 
 // import { data } from 'react-router';
 
