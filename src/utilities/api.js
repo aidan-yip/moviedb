@@ -43,5 +43,17 @@ function getMovieById(id) {
         });
 }
 
-
-export { getMovies, getMovieById, getMovieCast };
+function getRecommendedMovies(movieId){
+    return fetch(`${BASE_URL}/movie/${movieId}/recommendations?api_key=${API_KEY}`)
+    .then((response) => {
+        if(!response.ok){
+            throw new Error("Failed to fetch recommended movies");
+        }
+        return response.json();
+    })
+    .catch((error) => {
+        console.error("Error fetching recommended movies:", error);
+        throw error;
+    });
+}
+export { getMovies, getMovieById, getMovieCast, getRecommendedMovies };
