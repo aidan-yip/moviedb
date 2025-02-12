@@ -1,5 +1,5 @@
 import "./favorites.css";
-import Movies from "../components/movies";
+import Movies from "../components/Movies";
 import { GlobalContext } from "../context/GlobalContext";
 import { useContext } from "react";
 
