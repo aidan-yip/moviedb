@@ -1,8 +1,10 @@
 import { APP_TITLE } from "../globals/globals";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import site_logo from "/public/images/camera_icon.svg";
+import SearchBar from "./SearchBar";
+import { getsearchedMovies } from "../utilities/api";
 
 function Header() {
   const [isActive, setActive] = useState(false);
@@ -26,7 +28,6 @@ function Header() {
           />
         </Link>
       </div>
-
       <nav>
         <button
           className="menu_button"
@@ -43,6 +44,7 @@ function Header() {
           className={isActive ? "menu_toggle" : null}
           onClick={toggleClass}
         >
+          <SearchBar />
           <li>
             <Link to="/" className="navlink">
               Home
