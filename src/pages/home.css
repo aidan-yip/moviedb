@@ -1,5 +1,5 @@
 .overlay-container {
-  width: 100vw;
+  width: 100%;
   position: relative;
   z-index: 1;
   margin-top: 45vh;
