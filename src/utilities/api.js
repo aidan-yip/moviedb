@@ -56,4 +56,18 @@ function getRecommendedMovies(movieId){
         throw error;
     });
 }
-export { getMovies, getMovieById, getMovieCast, getRecommendedMovies };
+function searchMovies(query) {
+    return fetch(`${BASE_URL}/search/movie?query=${query}&include_adult=false&language=en-US&page=1&api_key=${API_KEY}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch search results");
+            }
+            return response.json();
+        })
+        .then((data) => data.results) // Return only the movie results
+        .catch((error) => {
+            console.error("Error fetching search results:", error);
+            throw error;
+        });
+}
+export { getMovies, getMovieById, getMovieCast, getRecommendedMovies,searchMovies };
