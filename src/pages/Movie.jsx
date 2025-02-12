@@ -9,7 +9,7 @@ import {
 import { IMG_URL } from "../globals/globals";
 import { formatReleaseDate, formatRating } from "../globals/toolbelt";
 import React from "react";
-import Movies from "../components/movies";
+import Movies from "../components/Movies";
 
 // MUI
 import Box from "@mui/material/Box";

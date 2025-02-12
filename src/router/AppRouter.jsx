@@ -9,20 +9,22 @@ import Favorites from "../pages/Favorites";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { GlobalProvider } from "../context/GlobalContext";
+import SearchResult from "../pages/SearchResult";
 
 const AppRouter = () => (
   <BrowserRouter>
-  <GlobalProvider>
-    <Header />
-    <main id="maincontent">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Movie/:id" element={<Movie />} />
-        <Route path="/Favorites" element={<Favorites />} />
-      </Routes>
-    </main>
-    <Footer />
+    <GlobalProvider>
+      <Header />
+      <main id="maincontent">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Movie/:id" element={<Movie />} />
+          <Route path="/Favorites" element={<Favorites />} />
+          <Route path="/searchedResults/:query" element={<SearchResult />} />
+        </Routes>
+      </main>
+      <Footer />
     </GlobalProvider>
   </BrowserRouter>
 );
