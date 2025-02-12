@@ -36,9 +36,11 @@ const SearchBar = () => {
     setSearchedMovies([]);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
     if (searchedMovies.length > 0) {
       navigate(`/searchedResults/:${query}`);
+    } else {
+      event.preventDefault();
     }
   };
 
