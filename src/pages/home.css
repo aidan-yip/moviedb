@@ -31,6 +31,10 @@
   padding-right: 3rem;
 }
 
+.home_container {
+  overflow: hidden;
+}
+
 /* desktop styles */
 @media (min-width: 50em) {
   .overlay-container {

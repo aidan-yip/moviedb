@@ -44,7 +44,9 @@ function Header() {
           className={isActive ? "menu_toggle" : null}
           onClick={toggleClass}
         >
-          <SearchBar />
+          <li>
+            <SearchBar />
+          </li>
           <li>
             <Link to="/" className="navlink">
               Home

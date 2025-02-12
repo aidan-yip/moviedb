@@ -1,67 +1,76 @@
 .search-container {
-    position: relative;
-    width: 100%;
-  }
-  
+  position: relative;
+  width: 100%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 1rem;
+  padding: 8px;
+  margin-right: 0rem;
+  background-color: #333;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  color: white;
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background-color: #f0f0f0;
+}
+
+.search-bar input {
+  display: inline;
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.search-icon {
+  display: inline;
+}
+
+.search-bar form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (min-width: 50em) {
   .search-bar {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: #333;
+    width: 30rem;
+    margin-right: 3rem;
   }
-  
-  .search-input {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 8px;
-  }
-  
-  .clear-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .autocomplete-list {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #333;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-    list-style: none;
-    padding: 0;
-    max-height: 200px;
-    overflow-y: auto;
-    color: white;
-  }
-  
-  .autocomplete-item {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .autocomplete-item:hover {
-    background-color: #f0f0f0;
-  }
-
-  .search-bar input{
-    display: inline;
-    background-color: #333;
-    color: #f0f0f0;
-  }
-
-  .search-icon{
-    display: inline;
-  }
-
-  .search-bar form{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+}
