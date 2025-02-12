@@ -127,6 +127,10 @@ nav {
     display: none;
   }
 
+  .menu_toggle {
+    height: 100rem;
+  }
+
   #skip_to_main {
     height: auto;
     margin: 0rem;
