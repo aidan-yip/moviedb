@@ -1,9 +1,9 @@
 import "./about.css";
-import camera_img from "/images/camera_icon.svg";
+import camera_img from "/images/moviedb_iconv2.png";
 
 function About() {
   return (
-    <div>
+    <div className="about-container">
       <h2 className="page-header">About</h2>
       <img src={camera_img} alt="camera" className="about-logo"/>
       <p className="about-text">
