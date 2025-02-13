@@ -33,12 +33,12 @@
 }
 
 .splide__pagination {
-  margin-bottom: 15rem;
+  margin-bottom: 17rem;
 }
 
 .home-banner {
   width: 100%;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
   position: relative;
   margin: 0rem auto;
@@ -46,4 +46,7 @@
 }
 
 @media (min-width: 1400px) {
+  .home-banner {
+    height: auto;
+  }
 }
