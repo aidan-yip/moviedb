@@ -12,7 +12,7 @@
 
 .movies-container {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(0, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 2rem;
   justify-content: center;
@@ -24,23 +24,6 @@
   width: 100%;
 }
 
-.cast-header {
-  margin-top: 2rem;
-  font-size: 3rem;
-  border-bottom: solid 1px #525252;
-}
-
-.cast-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-  justify-content: center;
-  border-bottom: solid 1px #525252;
-}
-
 @media (min-width: 700px) {
   .movie {
     padding: 1rem;
@@ -49,13 +32,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     gap: 2rem;
-  }
-  .cast-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 2rem;
-    justify-content: center;
   }
 }
 
