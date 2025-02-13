@@ -2,7 +2,7 @@ import { APP_TITLE } from "../globals/globals";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import site_logo from "/public/images/camera_icon.svg";
+import site_logo from "/public/images/moviedb_iconv2.png";
 import SearchBar from "./SearchBar";
 import { getsearchedMovies } from "../utilities/api";
 
@@ -23,6 +23,7 @@ function Header() {
           <Link to="/" className="site_logo">
             <img
               src={site_logo}
+              className="site-logo"
               alt="Site logo. Click to go to the homepage."
               aria-label="Site logo. Click to go to the homepage."
             />
