@@ -6,7 +6,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  margin: 0rem;
+  margin: 0rem auto;
   border-radius: 0rem;
   height: 5rem;
   display: flex;
@@ -23,6 +23,7 @@ header {
 }
 
 menu {
+  max-width: 1600px;
   display: flex;
   height: 0rem;
   position: absolute;
@@ -108,9 +109,10 @@ nav {
   /* navigation */
 
   header {
+    max-width: 1350px;
     align-items: center;
     flex-direction: row;
-    margin: 0.8rem;
+    margin: 0.8rem auto;
     padding: 0rem 3rem;
     border-radius: 1.5rem;
   }
@@ -139,5 +141,13 @@ nav {
     height: auto;
     margin: 0rem;
     margin-left: 0rem;
+  }
+}
+
+@media (min-width: 100rem) {
+  /* navigation */
+
+  header {
+    max-width: 1610px;
   }
 }
