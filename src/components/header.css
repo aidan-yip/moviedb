@@ -109,7 +109,7 @@ nav {
   /* navigation */
 
   header {
-    max-width: 1600px;
+    max-width: 1350px;
     align-items: center;
     flex-direction: row;
     margin: 0.8rem auto;
@@ -141,5 +141,13 @@ nav {
     height: auto;
     margin: 0rem;
     margin-left: 0rem;
+  }
+}
+
+@media (min-width: 100rem) {
+  /* navigation */
+
+  header {
+    max-width: 1610px;
   }
 }
