@@ -4,6 +4,8 @@ import { getsearchedMovies } from "../utilities/api.js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import "./searchResults.css";
+
 // import { data } from 'react-router';
 
 function SearchResult() {
@@ -29,7 +31,7 @@ function SearchResult() {
       <div className="searched-movies">
         {searchedMovieList.length === 0 && <h2>No movies found</h2>}
         {searchedMovieList.length > 0 && (
-          <Movies title="Searched Movies" movies={searchedMovieList} />
+          <Movies className="search-results" title="Search Results" movies={searchedMovieList} />
         )}
       </div>
     </section>

@@ -3,5 +3,7 @@
   z-index: 500;
   padding: 2rem;
   border-top: 1px solid #525252;
-  background: #1e1e1e;
+  background-color: #323232dd;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }

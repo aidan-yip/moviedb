@@ -55,7 +55,7 @@ const SearchBar = () => {
             placeholder="Search..."
             className="search-input"
           />
-          <button type="submit" className="search-icon">
+          <button type="submit" className="search-icon search-btn">
             🔍
           </button>
           {query && (
