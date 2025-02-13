@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -31,7 +31,7 @@
   .movies-container {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
@@ -39,7 +39,7 @@
   .movies-container {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(auto, 1fr);
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
