@@ -19,10 +19,14 @@
 .about-logo {
     width: 300px;
     padding: 2rem;
+    margin-top: 2rem;
 }
 
 .about-text {
     padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.7rem;
 }
 
 
