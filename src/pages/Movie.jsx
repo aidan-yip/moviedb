@@ -92,11 +92,12 @@ function Movie() {
                           : "https://via.placeholder.com/185" // TODO:  Add a Fallback image
                       }
                       alt={actor.name}
+                      className="cast-image"
                     />
                     <p>
-                      <strong>{actor.name}</strong>
+                      <strong className="actor-name">{actor.name}</strong>
                     </p>
-                    <p>as {actor.character}</p>
+                    <p className="actor-role">as {actor.character}</p>
                   </div>
                 ))
               ) : (
@@ -104,7 +105,9 @@ function Movie() {
               )}
             </div>
           </section>
-          <Movies title="Recommended Movies" movies={recommendedMovies} />
+          <div className="rec-container">
+            <Movies title="Recommended Movies" movies={recommendedMovies} />
+          </div>
         </>
       )}
     </div>

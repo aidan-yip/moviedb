@@ -51,6 +51,43 @@
   color: #dddddd;
 }
 
+.cast-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+  border-bottom: solid 1px #525252;
+}
+
+.cast-header {
+  margin-top: 8rem;
+  padding-bottom: 0.8rem;
+  font-size: 3rem;
+  border-bottom: solid 1px #525252;
+}
+
+.cast-image {
+  border-radius: 1rem;
+  box-shadow: 0px 7px 25px #000000c0;
+}
+
+.actor-name {
+  font-size: 1.5rem;
+}
+
+.actor-role {
+  font-size: 1.2rem;
+}
+
+.rec-container {
+  box-shadow: 0px 7px 25px #000000d2;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
 @media (min-width: 50rem) {
   .fav-button {
     width: 5rem;
@@ -66,5 +103,12 @@
 
   .banner {
     width: 50%;
+  }
+  .cast-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 2rem;
+    justify-content: center;
   }
 }
