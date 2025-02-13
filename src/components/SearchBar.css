@@ -49,8 +49,8 @@
 .autocomplete-list {
   position: absolute;
   top: 100%;
-  width: 100%;
-  height: 40rem;
+  width: 80%;
+  height: 23rem;
   background: #323232dd;
   box-shadow: 0px 7px 15px #000000da;
   border: solid 1px #494949;
@@ -108,6 +108,7 @@
 
   .autocomplete-list {
     width: 21rem;
+    height: 40rem;
   }
 }
 
@@ -118,6 +119,8 @@
   }
 
   .autocomplete-list {
+    position: absolute;
     width: 31rem;
+    height: 40rem;
   }
 }
