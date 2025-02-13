@@ -9,7 +9,7 @@
   height: 2rem;
   align-items: center;
   border-radius: 1rem;
-  padding: 8px;
+  padding: 8px 5px;
   margin-right: 0rem;
   background-color: #333333;
   border: #333333 2px solid;
@@ -84,7 +84,9 @@
 }
 
 .search-btn {
+  width: 3rem;
   border: solid 2px #333333;
+  border-radius: 10px;
 }
 
 .search-icon {

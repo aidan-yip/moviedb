@@ -42,6 +42,7 @@
   margin-top: 1rem;
   border-radius: 1rem;
   background-color: #ffffff;
+  animation: pulse-shadow 2s infinite;
 }
 
 .handle[title]:hover::after {
@@ -73,5 +74,17 @@
   .section-header {
     margin-top: 0rem;
     font-size: 3rem;
+  }
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 10px #ffffff5c;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 10px #ffffff5c;
   }
 }
