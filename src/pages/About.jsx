@@ -1,5 +1,5 @@
 import "./about.css";
-import camera_img from "/images/moviedb_iconv2.png";
+import camera_img from "/images/FinalLogo.svg";
 import tmdb_logo from "/images/tmdb_logo.png";
 function About() {
   return (
