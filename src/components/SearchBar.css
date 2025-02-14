@@ -8,11 +8,11 @@
   display: flex;
   height: 2rem;
   align-items: center;
-  border-radius: 1rem;
+  border-radius: 60rem;
   padding: 8px 5px;
   margin-right: 0rem;
   border-top: 2px solid #525252;
-  background-color: #333333;
+  background-color: #2b2f2bf0;
   flex-grow: 1;
   max-width: 30rem;
 }
@@ -22,7 +22,7 @@
 } */
 
 .search-bar:focus-within {
-  box-shadow: 0px 7px 15px #000000c0;
+  box-shadow: 0px 7px 30px #000000;
 }
 
 .search-input {
@@ -31,6 +31,7 @@
   outline: none;
   padding: 8px;
   font-weight: bold;
+  border-radius: 50rem;
 }
 
 .clear-btn {
@@ -52,11 +53,9 @@
   top: 100%;
   width: 80%;
   height: 23rem;
-  background: #323232dd;
-  box-shadow: 0px 7px 15px #000000da;
-  border: solid 1px #494949;
-  border-radius: 1rem;
-  margin-top: 0.5rem;
+  background: #2b2f2bf0;
+  border-radius: 0.4rem;
+  margin-top: 0rem;
   list-style: none;
   padding: 0;
   overflow-y: auto;
@@ -66,28 +65,28 @@
 }
 
 .autocomplete-item {
-  padding: 10px;
+  padding: 1px;
+  border-radius: 3px;
   cursor: pointer;
-  border-radius: 0.7rem;
-  margin: 0.7rem;
+  margin: 0.5rem;
   font-weight: bold;
 }
 
 .autocomplete-item:hover {
-  background-color: #b6e7ff;
+  background-color: #ffffff;
   color: #010101;
 }
 
 .search-bar input {
   display: inline;
-  background-color: #333333;
+  background-color: #2b2f2bf0;
   color: #f0f0f0;
 }
 
 .search-btn {
   width: 3rem;
   border: solid 2px #333333;
-  border-radius: 10px;
+  border-radius: 5rem;
 }
 
 .search-icon {
