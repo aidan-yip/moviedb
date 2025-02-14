@@ -43,10 +43,6 @@
   position: relative;
   margin: 0rem auto;
   box-shadow: 0px 7px 25px #000000c0;
-}
-
-@media (min-width: 1400px) {
-  .home-banner {
-    height: auto;
-  }
+  min-width: 100%;
+  min-height: 100vh;
 }
