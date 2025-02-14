@@ -10,7 +10,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --main-font: "Montserrat", serif;
+  --main-font: "Roboto", serif;
 }
 
 a {
@@ -46,7 +46,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #b6e7ff;
+  border-color: #ffffff;
 }
 button:focus,
 button:focus-visible {

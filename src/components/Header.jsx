@@ -47,17 +47,17 @@ function Header() {
               <SearchBar />
             </li>
             <li>
-              <Link to="/" className="navlink">
+              <Link to="/" className="navlink" onClick={toggleClass}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/Favorites" className="navlink">
+              <Link to="/Favorites" className="navlink" onClick={toggleClass}>
                 Favorites
               </Link>
             </li>
             <li>
-              <Link to="/About" className="navlink">
+              <Link to="/About" className="navlink" onClick={toggleClass}>
                 About
               </Link>
             </li>

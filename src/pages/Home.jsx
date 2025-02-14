@@ -62,7 +62,15 @@ function Home() {
     <section className="home_container">
       <SplideSlider />
       <div className="overlay-container">
-        <div className="handle" title="Click/Tap to scroll up" onClick={scrollToSection}></div>
+        <div className="handle-container" title="Click/Tap to scroll up">
+        <span
+          class="material-symbols-outlined handle"
+          title="Click/Tap to scroll up"
+          onClick={scrollToSection}
+        >
+          arrow_upward
+        </span></div>
+        
         <Movies title="Popular Movies" movies={popularMovies} />
         <Movies title="Now Playing" movies={nowPlayingMovies} />
         <Movies title="Top Rated" movies={topRatedMovies} />
