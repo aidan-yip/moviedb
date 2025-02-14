@@ -10,6 +10,8 @@ import { IMG_URL } from "../globals/globals";
 import { formatReleaseDate, formatRating } from "../globals/toolbelt";
 import React from "react";
 import Movies from "../components/Movies";
+import bannerPlaceHolder from "/images/banner.png";
+import castPlaceHolder from "/images/cast.png";
 
 // MUI
 import Box from "@mui/material/Box";
@@ -58,7 +60,11 @@ function Movie() {
         <>
           <img
             className="banner"
-            src={`${IMG_URL}w780/${movie.backdrop_path}`}
+            src={
+              movie.backdrop_path
+                ? `${IMG_URL}w780/${movie.backdrop_path}`
+                : bannerPlaceHolder
+            }
             alt={movie.title}
           />
           <section className="movieInfo">
@@ -89,7 +95,7 @@ function Movie() {
                       src={
                         actor.profile_path
                           ? `${IMG_URL}w185/${actor.profile_path}`
-                          : "https://via.placeholder.com/185" // TODO:  Add a Fallback image
+                          : castPlaceHolder
                       }
                       alt={actor.name}
                       className="cast-image"
