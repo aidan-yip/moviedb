@@ -2,7 +2,7 @@ import { APP_TITLE } from "../globals/globals";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import site_logo from "/public/images/FinalLogo.svg";
+import site_logo from "/public/images/moviedb_iconv2.png";
 import SearchBar from "./SearchBar";
 import { getsearchedMovies } from "../utilities/api";
 
@@ -28,7 +28,7 @@ function Header() {
               aria-label="Site logo. Click to go to the homepage."
             />
           </Link>
-          {/* <h1>{APP_TITLE}</h1> */}
+          <h1>{APP_TITLE}</h1>
         </div>
 
         <nav>
