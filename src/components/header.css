@@ -57,7 +57,7 @@ nav {
   list-style: none;
   color: #ffffff;
   font-size: 2.5vh;
-  font-weight: light;
+  font-weight: lighter;
   transition: 0.7s;
   background-color: transparent;
   border-radius: 60rem;
@@ -118,7 +118,7 @@ nav {
     align-items: center;
     flex-direction: row;
     margin: 0.8rem auto;
-    border-radius: 100rem;
+    border-radius: 0.8rem;
   }
 
   menu {
