@@ -10,7 +10,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --main-font: "Montserrat", serif;
+  --main-font: "Roboto", serif;
 }
 
 a {
