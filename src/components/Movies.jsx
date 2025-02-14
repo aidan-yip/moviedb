@@ -4,7 +4,9 @@ import "./Movies.css";
 function Movies({ title, movies }) {
   return (
     <section className="movies">
-      <h1 className="section-header" id="section-header">{title}</h1>
+      <h3 className="section-header" id="section-header">
+        {title}
+      </h3>
       {/* map over movies */}
       <div className="movies-container">
         {movies.slice(0, 8).map((movie) => (
