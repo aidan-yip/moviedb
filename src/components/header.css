@@ -14,10 +14,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 0rem 1rem;
-  background-color: #323232dd;
-  border: solid 1.3px #474747ee;
-  border-top: 2px solid #555555ee;
-  box-shadow: 0px 10px 10px 0px #0000007a;
+  background-color: #2b2f2bf0;
+  box-shadow: 0px 5px 5px 0px #0000007a;
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
 }
@@ -48,32 +46,29 @@ nav {
 }
 
 .site-logo {
-  width: 3rem;
-  height: 3rem;
-  margin: 0.7rem auto;
-  margin-top: 0.8rem;
-  margin-right: 1rem;
+  height: 5rem;
 }
 
 .navlink,
 .navlink:visited {
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 0.9rem 0.2rem;
   margin: 0.2rem;
   text-decoration: none;
   list-style: none;
   color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2.5vh;
+  font-weight: light;
   transition: 0.7s;
   background-color: transparent;
-  border-radius: 0.7rem;
+  border-radius: 60rem;
   pointer-events: all;
+  align-self: flex-end;
 }
 
 .navlink:hover,
 .navlink:active {
   color: #000000;
-  background-color: #b6e7ff;
+  background-color: #ffffff;
   box-shadow: 0px 7px 15px #000000c0;
 }
 
@@ -113,16 +108,17 @@ nav {
 }
 
 /* desktop styles */
-@media (min-width: 50em) {
+@media (min-width: 62.5rem) {
+  /* .site-logo{
+    height:13vh;
+  } */
   /* navigation */
-
   header {
     max-width: 1350px;
     align-items: center;
     flex-direction: row;
     margin: 0.8rem auto;
-    padding: 0rem 3rem;
-    border-radius: 1.5rem;
+    border-radius: 100rem;
   }
 
   menu {
