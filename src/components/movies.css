@@ -2,7 +2,8 @@
   padding: 2rem;
 }
 
-.movies h1 {
+.movies h3 {
+  font-size: 4.5vh;
   margin-bottom: 2rem;
 }
 
