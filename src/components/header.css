@@ -110,10 +110,10 @@ nav {
 }
 
 /* desktop styles */
-@media (min-width: 50em) {
-  .site-logo{
+@media (min-width: 62.5rem) {
+  /* .site-logo{
     height:13vh;
-  }
+  } */
   /* navigation */
   header {
     max-width: 1350px;
