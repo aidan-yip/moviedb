@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { APP_FOLDER_NAME } from "../globals/globals";
 
 //pages
 import Home from "../pages/Home";
@@ -12,7 +13,7 @@ import { GlobalProvider } from "../context/GlobalContext";
 import SearchResult from "../pages/SearchResult";
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={`/${APP_FOLDER_NAME}`}>
     <GlobalProvider>
       <Header />
       <main id="maincontent">
