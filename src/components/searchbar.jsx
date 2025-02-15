@@ -47,6 +47,8 @@ const SearchBar = () => {
   return (
     <div className="search-container">
       <div className="search-bar">
+        {/*Took help from AI to generate some code to output the form
+        It is just making a form wth an input field for hte movie and handling the submit to handleSubmit and is cross is prressed it handles it by running the clearSearch fucntion*/}
         <form className="search-form" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -65,6 +67,8 @@ const SearchBar = () => {
           )}
         </form>
       </div>
+      {/*Took help from AI to generate some code to output the list of movies
+      it is just taking the searchedmovies array and going through it and outputting the names in a ul*/}
       {searchedMovies.length > 0 && (
         <ul className="autocomplete-list">
           {searchedMovies.map((movie, index) => (

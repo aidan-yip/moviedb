@@ -6,8 +6,6 @@ import { useParams } from "react-router-dom";
 
 import "./searchResults.css";
 
-// import { data } from 'react-router';
-
 function SearchResult() {
   const query = useParams().query;
   const [searchedMovieList, setSearchedMovies] = useState([]);
@@ -31,7 +29,11 @@ function SearchResult() {
       <div className="searched-movies">
         {searchedMovieList.length === 0 && <h2>No movies found</h2>}
         {searchedMovieList.length > 0 && (
-          <Movies className="search-results" title="Search Results" movies={searchedMovieList} />
+          <Movies
+            className="search-results"
+            title="Search Results"
+            movies={searchedMovieList}
+          />
         )}
       </div>
     </section>

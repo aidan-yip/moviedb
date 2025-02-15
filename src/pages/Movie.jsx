@@ -87,30 +87,32 @@ function Movie() {
             </Box>
             {/* movie rating */}
           </section>
-            <h2 className="cast-header">Cast</h2>
-            <div className="cast-container">
-              {cast.length > 0 ? (
-                cast.map((actor) => (
-                  <div key={actor.id} className="cast-member">
-                    <img
-                      src={
-                        actor.profile_path
-                          ? `${IMG_URL}w185/${actor.profile_path}`
-                          : castPlaceHolder
-                      }
-                      alt={actor.name}
-                      className="cast-image"
-                    />
-                    <p>
-                      <strong className="actor-name">{actor.name}</strong>
-                    </p>
-                    <p className="actor-role">as {actor.character}</p>
-                  </div>
-                ))
-              ) : (
-                <p>No cast information available.</p>
-              )}
-            </div>
+          <h2 className="cast-header">Cast</h2>
+          <div className="cast-container">
+            {cast.length > 0 ? (
+              /*help taken from https://medium.com/@betselot.g.bzuneh/fetching-and-displaying-movie-data-with-cast-details-using-javascript-and-tmdb-ap-a428cc7c4c72
+            // it is just mapping over the casts taking one actor at a time and using extracting the profile path and name and role and just displaying it*/
+              cast.map((actor) => (
+                <div key={actor.id} className="cast-member">
+                  <img
+                    src={
+                      actor.profile_path
+                        ? `${IMG_URL}w185/${actor.profile_path}`
+                        : castPlaceHolder
+                    }
+                    alt={actor.name}
+                    className="cast-image"
+                  />
+                  <p>
+                    <strong className="actor-name">{actor.name}</strong>
+                  </p>
+                  <p className="actor-role">as {actor.character}</p>
+                </div>
+              ))
+            ) : (
+              <p>No cast information available.</p>
+            )}
+          </div>
           <div className="rec-container">
             <Movies title="Recommended Movies" movies={recommendedMovies} />
           </div>
