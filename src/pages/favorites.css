@@ -1,3 +1,22 @@
 .favourite-page{
-    margin-top: 10rem;
+    margin-top: 6rem;
+    min-height: calc(100vh - 6rem);
+    min-width: 90vw;
+    overflow: hidden;
+}
+
+.favourite-page .movies-container{
+    justify-content: center;
+}
+
+@media (min-width: 50rem){
+    .favourite-page .movies-container{
+        justify-content: start;
+    }
+}
+
+.favourite-page p{
+    /* width: max-content;
+    margin: 0 auto;  */
+    text-align: center;
 }

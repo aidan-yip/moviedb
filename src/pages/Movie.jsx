@@ -86,6 +86,7 @@ function Movie() {
               />
             </Box>
             {/* movie rating */}
+          </section>
             <h2 className="cast-header">Cast</h2>
             <div className="cast-container">
               {cast.length > 0 ? (
@@ -110,7 +111,6 @@ function Movie() {
                 <p>No cast information available.</p>
               )}
             </div>
-          </section>
           <div className="rec-container">
             <Movies title="Recommended Movies" movies={recommendedMovies} />
           </div>
