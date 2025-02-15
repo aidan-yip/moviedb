@@ -9,7 +9,7 @@ function Movies({ title, movies }) {
       </h3>
       {/* map over movies */}
       <div className="movies-container">
-        {movies.slice(0, 8).map((movie) => (
+        {movies.slice(0, 10).map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>

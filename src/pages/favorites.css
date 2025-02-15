@@ -14,3 +14,9 @@
         justify-content: start;
     }
 }
+
+.favourite-page p{
+    /* width: max-content;
+    margin: 0 auto;  */
+    text-align: center;
+}
